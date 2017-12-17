@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var a=Symbol("123");
+			console.log(a);//红字Symbol(123)
+			console.log(a.toString());//黑子Symbol(123)
+			
+			let obj={name:"qwe"};
+			let age=Symbol();
+			obj[age]=18;
+			for (let item in obj) {
+				console.log(obj[item]);
+			}
+			console.log(obj);
+		</script>
+	</body>
+</html>

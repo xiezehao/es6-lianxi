@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+//			let binary = 0B010101;
+//			console.log(binary);//21
+//			
+//			let b=0o666;
+//			console.log(b);//438
+//数字验证Number.isFinite( xx )
+			let a=11/4;
+			console.log(Number.isFinite(a));//true
+			console.log(Number.isFinite("123"));//false
+			console.log(Number.isFinite(null));//false
+			console.log(Number.isFinite(undefined));//false
+//			NaN验证
+			console.log(Number.isNaN(NaN));//ture
+			
+			//判断是否为整数Number.isInteger(xx)
+			console.log(Number.isInteger(1))//true
+			console.log(Number.isInteger(1.))//true
+			console.log(Number.isInteger(1.123))//false
+//			整数转换Number.parseInt(xxx)和浮点型转换Number.parseFloat(xxx)
+			let b="1.23";
+			console.log(Number.parseInt(b));//1
+			console.log(Number.parseFloat(b));//1.23
+			
+			//整数取值范围操作
+			console.log(Math.pow(2,53)-1);//9007199254740991
+			//最大安全整数
+			console.log(Number.MAX_SAFE_INTEGER);//9007199254740991
+			//最小安全整数
+			console.log(Number.MIN_SAFE_INTEGER);//-9007199254740991
+			//安全整数判断isSafeInteger( )
+			console.log(Number.isSafeInteger(123))//true
+		</script>
+	</body>
+</html>

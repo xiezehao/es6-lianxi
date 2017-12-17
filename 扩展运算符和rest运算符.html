@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function aa(...arg){
+				console.log(arg[0]);
+				console.log(arg[1]);
+				console.log(arg[2]);
+			}
+			aa(1,2);
+			
+			let arr1=["www","eee","rrr"];
+			let arr2=[...arr1];
+			arr2.push("1111");
+			console.log(arr1);
+			console.log(arr2);
+			
+			function qwe(f,...arg){
+				for (let val of arg) {
+					console.log(val);
+				}
+			}
+			qwe(0,1,2,3,4,5);
+		</script>
+	</body>
+</html>

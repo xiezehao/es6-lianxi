@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			let json={
+				"0":"a",
+				"1":"b",
+				"2":"c",
+				length:3
+			}
+//			JSON数组格式转换
+			let arr=Array.from(json);
+			console.log(arr);
+			//Array.of()方法：
+			let arr1=Array.of(1,2,3,4);
+			console.log(arr1);//[1,2,3,4]
+			console.log(Array.of("a","b","c"));//["a","b","c"]
+			
+			//find( )实例方法:
+			let arr2=[1,2,3,4,5,6];
+			console.log(arr2.find(function(val,index,arr){
+				return val>2;
+			}));//3
+			
+		</script>
+	</body>
+</html>

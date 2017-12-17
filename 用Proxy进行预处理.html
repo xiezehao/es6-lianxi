@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//需要注意的是这里是两个花括号，第一个花括号就相当于我们方法的主体，
+			//后边的花括号就是Proxy代理处理区域，相当于我们写钩子函数的地方。
+			var pro=new Proxy({
+				add:function(val){
+					return val+10;
+				},
+				name:"132"
+			},{
+				/*
+				 *target：得到的目标值
+				 *key：目标的key值，相当于对象的属性
+				 *property：这个不太常用，用法还在研究中，还请大神指教。
+				 * */
+				get:function(target,key,property){
+					console.log("get");
+					return target[key];
+				},
+				
+				set:function(target,key,value,receiver){
+					console.log(`${key}=${value}`);
+					return target[key]=value;
+				}
+			});
+			
+			console.log(pro.name);
+			pro.name="456";
+			console.log(pro.name);
+		</script>
+	</body>
+</html>

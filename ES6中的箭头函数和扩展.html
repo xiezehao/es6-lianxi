@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function qwe(a,b=1){
+				return a+b;
+			}
+			
+			console.log(qwe(1));
+			
+			function asd(a,b=1){
+				if(a==0){
+					throw new Error("this is error")
+				}
+				return a+b;
+			}
+			
+			console.log(asd(1));
+			console.log(asd.length);//1,必须传入的参数。
+			
+			let zxc=(a,b=1)=> a+b;
+			//箭头函数中不可加new，也就是说箭头函数不能当构造函数进行使用。
+			console.log(zxc(5));
+		</script>
+	</body>
+</html>

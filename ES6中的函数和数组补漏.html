@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//对象的函数解构
+			let json={
+				a:"a",
+				b:"b"
+			}
+			
+			function fun(a,b){
+				console.log(a);
+			}
+			fun(json);
+			
+			let arr=["z","x","c"];
+			function fun2(a,b,c){
+				console.log(a,b,c);
+			}
+			
+			fun2(...arr);
+			//对象判断
+			let obj={
+				a:"a",
+				b:"b"
+			}
+			console.log("a" in obj);//true
+			
+			let arr2=[,,,,,];
+			console.log(arr2.length);//5
+			console.log(0 in arr2);//false
+			
+			arr.forEach((val,index)=>{
+				console.log(val,index);
+			})
+			
+			arr.filter(val=>{
+				console.log(val);
+			})
+			
+			arr.some(x=>console.log(x));
+			//map在这里起到一个替换的作用
+			console.log(arr.map(x=>"web"));
+			
+			console.log(arr.join("/"));//z/x/c
+			console.log(arr.toString("/"));//z,x,c
+		</script>
+	</body>
+</html>
